@@ -2,7 +2,7 @@
 var mockBin = require('mock-bin');
 var which = require('shelljs').which;
 
-var rescapeChars = /\\/g;
+var rbackslash = /\\/g;
 
 module.exports = function (js, command) {
 	var originalGit = which('git').stdout.replace(rescapeChars, '\\\\');
