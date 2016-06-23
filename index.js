@@ -3,7 +3,8 @@ var mockBin = require('mock-bin');
 var which = require('shelljs').which;
 
 module.exports = function (js, command) {
-	var originalGit = which('git').stdout.replace(new RegExp('\\\\', 'g'), '\\\\');
+	var originalGit = which('git');
+	console.log('originalGit: ' + originalGit + '\n');
 
 	if (command) {
 		js = 'var argv = process.argv;' +

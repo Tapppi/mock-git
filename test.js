@@ -2,7 +2,7 @@ import test from 'ava';
 import shell from 'shelljs';
 import m from './';
 
-shell.config.silent = true;
+shell.config.silent = false;
 
 test('mock and unmock git bla', async t => {
 	const log = 'mocking git bla!';
